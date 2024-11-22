@@ -1,0 +1,23 @@
+.head_point {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: darkgoldenrod;
+    font-size: 4em;
+}
+.vertical-timeline-element {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  
+  .vertical-timeline-element:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .vertical-timeline-element-content {
+    transition: background-color 0.3s ease; 
+  }
+  
+  .vertical-timeline-element-title {
+    font-size: 28px;
+  }

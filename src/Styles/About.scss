@@ -1,0 +1,69 @@
+
+  
+.about_name{
+    font-size: 42px;
+    color: rgb(175, 203, 231);
+}
+
+.about_info {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    border-radius: 15% 0 15% 0;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-top: 45px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about_info p {
+    text-align: center;
+    color: teal;
+    font-size: var(--quote-text);
+    font-family: Caveat, cursive;
+    font-weight: bold;
+}
+
+.BoyImgContainer {
+    background-image: url('../Assets/Boy.svg'); 
+    background-size: auto; 
+    background-repeat: no-repeat;
+    background-position: right;
+    position: fixed;
+    top: 15rem;
+    right: 8em;
+    width: 100%; 
+    height: 65vh; 
+}
+
+
+@media (min-width : 40em) and (max-width: 70em) {
+    .BoyImgContainer {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 40em) {
+    .BoyImgContainer {
+        height: 30vh;
+    }
+    .about_info {
+        margin-right: 1em;
+    }
+}

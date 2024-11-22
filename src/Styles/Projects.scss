@@ -1,0 +1,165 @@
+.project-list-container {
+  margin-bottom: 3em;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em , 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-content-container {
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-image-container {
+  width: 100%;
+  height: auto; 
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card.large-card .card-image-container {
+  width: 100%;
+  height: auto;
+}
+
+.card.small-card .card-image-container {
+  width: 100%;
+  height: auto;
+}
+.title{
+  color: steelblue
+}
+.full-screen-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  perspective: 1000px;
+}
+
+.full-screen-content {
+  max-width: 90%;
+  max-height: 90%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.full-screen-image-container {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.full-screen-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card {
+  width: 90%;
+  height: 90%;
+  position: relative;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.full-screen-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.flip-card-front {
+  background: white;
+}
+
+.flip-card-back {
+  background: #f7f7f7;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.hosted_link a {
+  color: #0073e6; 
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.hosted_link a:hover {
+  text-decoration: underline;
+}
+
+.hosted_link_project {
+  color: #0073e6; 
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media (max-width: 52em) {
+  .card-list {
+    grid-template-columns: 1fr; 
+  }
+
+  .card-image-container {
+    height: 200px; 
+  }
+
+  .card.large-card .card-image-container {
+    height: 300px; 
+  }
+}

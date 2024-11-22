@@ -1,0 +1,46 @@
+.RightSidePanel {
+    width: 70px;
+    position: fixed;
+    bottom: 0px;
+    left: auto;
+    right: 20px;
+    z-index: 10;
+    color: #71e46d;
+    flex: 1;
+}
+
+.EmailBox {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+.Email_Lines {
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    letter-spacing: 0.1em;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.EmailBox::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100px;
+    margin: 0px auto;
+    background-color: rgb(168, 178, 209);
+}
+.list_icons {
+    padding: 10px;
+}
+.Email_Lines:hover{
+    color:  #16f012;
+}
+@media (max-width: 52em) {
+    .RightSidePanel {
+        display: none;
+    }
+}
